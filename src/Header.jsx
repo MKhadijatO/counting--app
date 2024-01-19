@@ -1,8 +1,10 @@
+import logo from "../src/images/react.png"
+
 const Header = () => {
     return(
-        <div>
-            <img src="./src/images/react.png" alt="reactlogo" />
-            <p> React Course - CountOpedia</p>
+        <div className="pt-3 py-3 pl-2" style= {{borderBottom: "1px solid white"}}>
+            <img src={logo} style={{height:"35px", verticalAlign: "top"}}></img>
+            <span className="h2 pt-4 m-2 text-white" >React Course - CountOpedia</span>
         </div>
     )
 }
