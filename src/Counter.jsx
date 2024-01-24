@@ -13,10 +13,22 @@ class Counter extends React.Component {
 
   handleAttack() {
     // alert('Attack clicked');
- 
+    
+    
+    /*** the second stait after execution waits for the value of the one above using the previousState***/
+    this.setState((previousState)=>{
+        return{
+            count:previousState.count + 100,
+        }
+    });
+    this.setState((previousState)=>{
+        return{
+            count:previousState.count + 10,
+        }
+    }); 
 
-    this.setState({ count: this.state.count + 100 });
-    this.setState({ count: this.state.count + 10 }) // only this get executed 
+    // this.setState({ count: this.state.count + 100 });
+    // this.setState({ count: this.state.count + 10 }) // only this get executed 
   }
 
   handleDefence() {
