@@ -15,11 +15,11 @@ class Counter extends React.Component {
 
   handleAttack() {
     // alert('Attack clicked');
-
-    /*** the second stait after execution waits for the value of the one above using the previousState***/
     this.setState((previousState) => {
+      let newCount = previousState.count + Math.round(Math.random()*10)
+
       return {
-        count: previousState.count + 1,
+        count: newCount,
       };
     });
   }
@@ -27,8 +27,10 @@ class Counter extends React.Component {
   handleDefence() {
     // alert('Defence clicked');
     this.setState((previousState) => {
+
+      let newCount = previousState.count - Math.round(Math.random()*10)
       return {
-        count: previousState.count - 1,
+        count: newCount,
       };
     });
   }
