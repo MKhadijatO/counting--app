@@ -45,6 +45,16 @@ class Counter extends React.Component {
       }
       
   }
+  
+  handleReset = () => {
+    this.setState(() => {
+      return {
+        count: 0,
+      };
+    });
+  }
+
+
 
 
   render() {
@@ -81,7 +91,7 @@ class Counter extends React.Component {
         <div className="col-12 col-md-4 offset-md-4">
           <button className="btn btn-secondary w-100 mt-2" onClick={this.handleRandomPlay}>Random Play</button>
           <br />
-          <button className="btn btn-warning w-100 mt-2">Reset</button>
+          <button className="btn btn-warning w-100 mt-2" onClick={this.handleReset}>Reset</button>
         </div>
       </div>
     );
